@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../static/administrador.css">
+</head>
+
+<body>
+    {% set mensagem = get_flashed_messages() %}
+    {% if mensagem %}
+    <div class="flash_alerta">
+        {{mensagem[0]}}
+
+    </div>
+    {% endif %}
+       <h1 class="titulo">Administrador</h1>
+
+    <div id="form_fundo">
+        <h1>CADASTRAR USUÁRIO</h1>
+        <h1>@Liberty</h1>
+        <div id="form_frente">
+            <form action="/cadastrarUsuario" id="login" method="post">
+                <label for="nome">HOME</label>
+                <input type="text" name="nome" id="nome" required placeholder="Digíte seu nome "><br><br>
+                <label for="senha" id="senha">SENHA</label>
+                <input type="text" name="senha" id="senha" placeholder="Digíte sua senha "><br><br>
+                <button type="submit" id="btn-login">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>CADASTRAR
+
+                </button>
+        </div>
+    </div>
+    </form>
+</body>
+
+</html>
